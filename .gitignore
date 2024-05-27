@@ -1,2 +1,6 @@
 **/__pycache__
 webapp-frontend/node_modules
+webapp-frontend/build
+poetry.lock
+webapp_backend/config/config.ini
+**/*.db

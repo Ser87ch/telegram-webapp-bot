@@ -1,4 +1,4 @@
-export default function () {
+export default function state () {
     return [
         { name: 'Product 1', count: 0, id: 0, price: 12 },
         { name: 'Product 2', count: 0, id: 1, price: 13 },

@@ -16,7 +16,7 @@ function App() {
     let req = new XMLHttpRequest();
   
     req.onreadystatechange = () => {
-      if (req.readyState == XMLHttpRequest.DONE) {
+      if (req.readyState === XMLHttpRequest.DONE) {
           //send order to backend
           window.Telegram.WebApp.sendData(order)
       }
