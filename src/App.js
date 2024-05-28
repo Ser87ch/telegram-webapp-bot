@@ -13,14 +13,7 @@ function App() {
 
   window.Telegram.WebApp.onEvent('mainButtonClicked', function(e) {
     window.Telegram.WebApp.MainButton.showProgress()
-    let req = new XMLHttpRequest();
-  
-    req.onreadystatechange = () => {
-      if (req.readyState === XMLHttpRequest.DONE) {
-          //send order to backend
-          window.Telegram.WebApp.sendData(order)
-      }
-    };
+    window.Telegram.WebApp.sendData(order)
   })
   
   const addProduct = (p) => {

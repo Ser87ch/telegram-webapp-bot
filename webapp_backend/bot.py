@@ -10,7 +10,7 @@ bot = telebot.TeleBot(app.telegram_key(), parse_mode=None)
 
 def open_shop_keyboard():
     keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
-    Catalog = types.KeyboardButton('🛒 STOREFRONT 🌐', web_app=types.WebAppInfo(url='https://cyberseeds.io/tgwebapp/index.html'))
+    Catalog = types.KeyboardButton('🛒 STOREFRONT 🌐', web_app=types.WebAppInfo(url='https://black-meadow-07b785003.5.azurestaticapps.net/index.html'))
     keyboard.add(Catalog)
     return keyboard
 
