@@ -12,7 +12,7 @@ function App() {
   const [order, updateOrdr] = useState(items);
 
   window.Telegram.WebApp.onEvent('mainButtonClicked', function(e) {
-    window.Telegram.WebApp.MainButton.showProgress()
+    // window.Telegram.WebApp.MainButton.showProgress()
     window.Telegram.WebApp.sendData(order)
   })
   
