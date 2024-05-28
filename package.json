@@ -1,6 +1,6 @@
 {
   "name": "donat-app",
-  "homepage": "tgwebapp/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
