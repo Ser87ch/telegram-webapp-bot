@@ -37,6 +37,6 @@ def echo_yall(message):
     repository.create_order(message.chat.id, message.from_user.username, message.web_app_data.data, uuid.uuid4(), datetime.datetime.now())
 
     bot.send_message(message.chat.id, "Thank you for the order!")
-    bot.send_message(message.chat.id, "Send deivery details in format:\n\n`City, Street, Appartments, Phone number`\nDelivery costs {}$".format(product.get_delivery_price()), parse_mode='MarkdownV2')
+    bot.send_message(message.chat.id, "Send delivery details in format:\n\n`City, Street, Appartments, Phone number`\nDelivery costs {}$".format(product.get_delivery_price()), parse_mode='MarkdownV2')
 
 bot.infinity_polling()
