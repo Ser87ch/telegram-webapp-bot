@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 export default function Order({order}) {
     return(
         <Container style={{ marginBottom: '1rem', padding: 0 }} >
-            {order.length > 0 ? ( <h4>Ваше замовлення</h4>) : ''} 
+            {order.length > 0 ? ( <h4>Your order</h4>) : ''} 
             <ListGroup as="ol">
                 <TransitionGroup className="order-list">
                     {order.map(i => (
@@ -20,7 +20,7 @@ export default function Order({order}) {
                                 <div className="ms-2 me-auto">
                                     <div className="fw-bold">{i.name} x {i.count}</div>
                                 </div>
-                                <Badge bg="primary" pill>{i.count * 89}.00 грн.</Badge>
+                                <Badge bg="primary" pill>£{i.count * i.price}</Badge>
                             </ListGroup.Item> 
                         </CSSTransition>    
                     ))}

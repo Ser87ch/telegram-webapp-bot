@@ -28,7 +28,7 @@ function App() {
     updateOrdr(ordr=>[...ordr]) //little hack
     if (order.map(it => it > 0).length > 0 ) {
         window.Telegram.WebApp.MainButton.isVisible = true
-        window.Telegram.WebApp.MainButton.text = 'Order sum: ' + order.reduce((t, c) => t = t + c.count,0) * items[p].price +' $.' 
+        window.Telegram.WebApp.MainButton.text = 'Order sum: ' + order.reduce((t, c) => t = t + c.count,0) * order[p].price +' $.' 
     }
   }
   const rmProduct = (p) => {
@@ -36,7 +36,7 @@ function App() {
     updateOrdr(ordr=>[...ordr])
     if (order.map(it => it > 0).length > 0 ) {
         window.Telegram.WebApp.MainButton.isVisible = true
-        window.Telegram.WebApp.MainButton.text = 'Order sum: ' + order.reduce((t, c) => t = t + c.count,0) * items[p].price +' $.' 
+        window.Telegram.WebApp.MainButton.text = 'Order sum: ' + order.reduce((t, c) => t = t + c.count,0) * order[p].price +' $.' 
     } else {
       window.Telegram.WebApp.MainButton.isVisible = false
     }
