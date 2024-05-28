@@ -27,6 +27,5 @@ export default function Order({order}) {
                 </TransitionGroup>
             </ListGroup>
         </Container>
-        
     );
 }
