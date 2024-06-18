@@ -7,7 +7,7 @@ export default function ProductCard({id, product, addProduct, rmProduct}) {
         <Col>
             <Card className='seed-card'>
                 <CountPill product={product} id={id} />
-                <Card.Img variant="top" src="https://via.placeholder.com/420.png" />
+                <Card.Img variant="top" src={product.image} />
                 <Card.Body>
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Text>

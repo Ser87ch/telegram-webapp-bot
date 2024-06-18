@@ -16,7 +16,7 @@ export default function Order({order}) {
                         >
                             <ListGroup.Item as="li"
                             className="d-flex justify-content-between align-items-start">
-                                <Image style={{ width: 25, height: 25 }} src="https://via.placeholder.com/20.png" height="1rem" />
+                                <Image style={{ width: 25, height: 25 }} src={i.icon} height="1rem" />
                                 <div className="ms-2 me-auto">
                                     <div className="fw-bold">{i.name} x {i.count}</div>
                                 </div>
