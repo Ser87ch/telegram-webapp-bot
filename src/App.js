@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Shop from './Shop';
 import Order from './Order';
 import items from './catalog/state';
@@ -10,6 +10,12 @@ import items from './catalog/state';
 function App() {
 
   const [order, updateOrdr] = useState(items);
+  const [restaurantData, setData] = useState(null);
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const restaurantUrl = urlParams.get('restaurant');
+  console.log(restaurantUrl); 
+  
 
   window.Telegram.WebApp.onEvent('mainButtonClicked', function(e) {
     window.Telegram.WebApp.MainButton.showProgress()
@@ -35,8 +41,17 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    fetch(restaurantUrl)
+      .then(response => response.json())
+      .then(json => setData(json))
+      .catch(error => console.error(error));
+  }, []);
+
+
   return (
     <div className="App">
+      <h1>Restaurant: {restaurantData ? restaurantData.name : "Loading..."}</h1>
       <Shop addProduct={addProduct} rmProduct={rmProduct} products={order} />
       <Order order={order.filter(i => i.count > 0)}/>
     </div>
