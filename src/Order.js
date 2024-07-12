@@ -20,7 +20,7 @@ export default function Order({order}) {
                                 <div className="ms-2 me-auto">
                                     <div className="fw-bold">{i.name} x {i.count}</div>
                                 </div>
-                                <Badge bg="primary" pill>£{i.count * i.price}</Badge>
+                                <Badge bg="primary" pill>${i.count * i.price / 100}</Badge>
                             </ListGroup.Item> 
                         </CSSTransition>    
                     ))}
